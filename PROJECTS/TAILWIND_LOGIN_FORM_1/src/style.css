@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(to bottom, rgba(3, 32, 8, 0.763), rgba(21, 21, 21, 0.8)), url('./images/pexels-jane-foster-489004101-30012995.jpg');
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+/* .transparent-form{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+} */

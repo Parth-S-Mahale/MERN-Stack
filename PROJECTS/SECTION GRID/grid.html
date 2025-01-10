@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, auto);
+            gap: 5px;
+        }
+
+        .item{
+            border: 2px solid white;
+            overflow: hidden;
+        }
+
+        .item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item1{
+            grid-column: 1/3;
+            grid-row: 1/3;
+        }
+
+        .item3{
+            grid-column: 3/5;
+            grid-row: 2/4;
+        }
+        
+        .item4{
+            grid-column: 1/5;
+        }
+
+    </style>
+
+</head>
+<body style="background-color: black;">
+    <div class="grid-container">
+        <div class="item item1"><img src="./Images/Freddy.jpg" alt=""></div>
+        <div class="item item2"><img src="./Images/Jazz Concert.jpg" alt=""></div>
+        <div class="item"><img src="./Images/Kanguva.jpg" alt=""></div>
+        <div class="item item3"><img src="./Images/Keep Calm.jpg" alt=""></div>
+        <div class="item"><img src="./Images/Race3.jpg" alt=""></div>
+        <div class="item"><img src="./Images/The Boy.jpg" alt=""></div>
+        <div class="item item4"><img src="./Images/Your Fault.jpg" alt=""></div>
+    </div>
+        
+</body>
+</html>
