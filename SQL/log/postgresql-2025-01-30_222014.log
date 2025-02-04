@@ -1,0 +1,84 @@
+2025-01-30 22:20:14.127 IST [15868] LOG:  database system was shut down at 2025-01-30 22:20:03 IST
+2025-01-30 22:25:14.124 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 22:25:19.162 IST [2588] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.018 s, sync=0.006 s, total=5.039 s; sync files=11, longest=0.002 s, average=0.001 s; distance=288 kB, estimate=288 kB; lsn=0/15BAF00, redo lsn=0/15BAEA8
+2025-01-30 22:26:00.447 IST [13620] FATAL:  password authentication failed for user "sanja"
+2025-01-30 22:26:00.447 IST [13620] DETAIL:  Role "sanja" does not exist.
+	Connection matched file "D:/Code/WEB-DEV/SQL/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2025-01-30 22:26:06.730 IST [4484] FATAL:  password authentication failed for user "sanja"
+2025-01-30 22:26:06.730 IST [4484] DETAIL:  Role "sanja" does not exist.
+	Connection matched file "D:/Code/WEB-DEV/SQL/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2025-01-30 22:35:14.181 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 22:35:21.374 IST [11060] FATAL:  terminating connection due to administrator command
+2025-01-30 22:35:21.504 IST [2588] LOG:  checkpoint complete: wrote 72 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.312 s, sync=0.004 s, total=7.323 s; sync files=5, longest=0.002 s, average=0.001 s; distance=4552 kB, estimate=4552 kB; lsn=0/1A2D680, redo lsn=0/1A2D200
+2025-01-30 22:35:21.504 IST [2588] LOG:  checkpoint starting: immediate force wait
+2025-01-30 22:35:21.512 IST [2588] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.009 s; sync files=1, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=4097 kB; lsn=0/1A2D750, redo lsn=0/1A2D6F8
+2025-01-30 22:40:21.517 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 22:42:07.080 IST [2588] LOG:  checkpoint complete: wrote 982 buffers (6.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=105.416 s, sync=0.104 s, total=105.563 s; sync files=303, longest=0.011 s, average=0.001 s; distance=4571 kB, estimate=4571 kB; lsn=0/1EA4670, redo lsn=0/1EA45E0
+2025-01-30 22:42:43.633 IST [3984] ERROR:  relation "chai_store" already exists
+2025-01-30 22:42:43.633 IST [3984] STATEMENT:  CREATE TABLE chai_store(
+	id 			SERIAL PRIMARY KEY,
+	chai_name 	VARCHAR(50),
+	price 		DECIMAL(5, 2),
+	chai_type 	VARCHAR(50),
+	available 	BOOLEAN
+	);
+2025-01-30 22:45:21.090 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 22:45:23.084 IST [2588] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.959 s, sync=0.018 s, total=1.994 s; sync files=18, longest=0.010 s, average=0.001 s; distance=63 kB, estimate=4120 kB; lsn=0/1EB4288, redo lsn=0/1EB4230
+2025-01-30 22:52:50.001 IST [3984] ERROR:  relation "chai_store" already exists
+2025-01-30 22:52:50.001 IST [3984] STATEMENT:  CREATE TABLE chai_store(
+	id 			SERIAL PRIMARY KEY,
+	chai_name 	VARCHAR(50),
+	price 		DECIMAL(5, 2),
+	chai_type 	VARCHAR(50),
+	available 	BOOLEAN
+	);
+	
+	INSERT INTO chai_store(
+	chai_name, price, chai_type, available
+	) VALUES
+	('Masala Chai', 30.00, 'Spiced', TRUE),
+	('Green Chai', 25.00, 'Herbal', TRUE),
+	('Black Chai', 20.00, 'Classic', TRUE),
+	('Iced Chai', 35.00, 'Cold', FALSE),
+	('Oolang', 40.00, 'Speciality', TRUE);
+2025-01-30 22:55:21.106 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 22:55:23.009 IST [2588] LOG:  checkpoint complete: wrote 18 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.863 s, sync=0.023 s, total=1.904 s; sync files=17, longest=0.010 s, average=0.002 s; distance=48 kB, estimate=3713 kB; lsn=0/1EC02C8, redo lsn=0/1EC0270
+2025-01-30 23:03:28.734 IST [3984] ERROR:  syntax error at or near "'Chai Name'" at character 21
+2025-01-30 23:03:28.734 IST [3984] STATEMENT:  SELECT chai_name AS 'Chai Name', 
+	price AS 'Cost in INR' FROM chai_store
+2025-01-30 23:03:51.110 IST [3984] ERROR:  syntax error at or near "'Chai Name'" at character 21
+2025-01-30 23:03:51.110 IST [3984] STATEMENT:  SELECT chai_name AS 'Chai Name', 
+	price AS 'Cost in INR' FROM chai_store;
+2025-01-30 23:04:29.925 IST [3984] ERROR:  syntax error at or near "'Chai Name'" at character 21
+2025-01-30 23:04:29.925 IST [3984] STATEMENT:  SELECT chai_name AS 'Chai Name', price AS 'Cost in INR' FROM chai_store;
+2025-01-30 23:05:06.678 IST [3984] ERROR:  syntax error at or near "'Chai Name'" at character 21
+2025-01-30 23:05:06.678 IST [3984] STATEMENT:  SELECT chai_name AS 'Chai Name', price AS 'Cost in INR' FROM chai_store;
+2025-01-30 23:05:21.027 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 23:05:21.384 IST [2588] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.327 s, sync=0.013 s, total=0.357 s; sync files=4, longest=0.010 s, average=0.004 s; distance=1 kB, estimate=3342 kB; lsn=0/1EC0980, redo lsn=0/1EC0928
+2025-01-30 23:13:29.806 IST [3984] ERROR:  syntax error at or near "*" at character 8
+2025-01-30 23:13:29.806 IST [3984] STATEMENT:  DELETE * FROM chai_store;
+2025-01-30 23:14:20.229 IST [3984] ERROR:  syntax error at or near "(" at character 23
+2025-01-30 23:14:20.229 IST [3984] STATEMENT:  DELETE FROM chai_store(
+	chai_name, price, chai_type, available
+	) VALUES
+	('Masala Chai', 30.00, 'Spiced', TRUE),
+	('Green Chai', 25.00, 'Herbal', TRUE),
+	('Black Chai', 20.00, 'Classic', TRUE),
+	('Iced Chai', 35.00, 'Cold', FALSE),
+	('Oolang', 40.00, 'Speciality', TRUE);
+2025-01-30 23:14:47.558 IST [3984] ERROR:  syntax error at or near "*" at character 8
+2025-01-30 23:14:47.558 IST [3984] STATEMENT:  DELETE * FROM chai_store;
+2025-01-30 23:15:21.395 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 23:15:21.723 IST [2588] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.314 s, sync=0.005 s, total=0.328 s; sync files=4, longest=0.002 s, average=0.002 s; distance=3 kB, estimate=3008 kB; lsn=0/1EC18C8, redo lsn=0/1EC1838
+2025-01-30 23:21:52.510 IST [3984] ERROR:  column "Black chai" does not exist at character 45
+2025-01-30 23:21:52.510 IST [3984] STATEMENT:  SELECT * 
+	FROM chai_store
+	WHERE chai_name = "Black chai";
+2025-01-30 23:22:14.813 IST [3984] ERROR:  column "Black chai" does not exist at character 44
+2025-01-30 23:22:14.813 IST [3984] STATEMENT:  SELECT * FROM chai_store WHERE chai_name = "Black chai";
+2025-01-30 23:22:32.134 IST [3984] ERROR:  column "Black Chai" does not exist at character 44
+2025-01-30 23:22:32.134 IST [3984] STATEMENT:  SELECT * FROM chai_store WHERE chai_name = "Black Chai";
+2025-01-30 23:30:21.747 IST [2588] LOG:  checkpoint starting: time
+2025-01-30 23:30:22.088 IST [2588] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.321 s, sync=0.013 s, total=0.341 s; sync files=4, longest=0.010 s, average=0.004 s; distance=3 kB, estimate=2708 kB; lsn=0/1EC25B0, redo lsn=0/1EC2558
+2025-01-30 23:35:36.909 IST [3984] ERROR:  syntax error at or near ";" at character 43
+2025-01-30 23:35:36.909 IST [3984] STATEMENT:  SELECT * FROM chai_store ORDER BY price IN;

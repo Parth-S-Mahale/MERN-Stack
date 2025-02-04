@@ -1,0 +1,612 @@
+2025-01-31 15:27:00.232 IST [7312] LOG:  database system was shut down at 2025-01-31 15:26:24 IST
+2025-01-31 15:32:00.246 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 15:32:00.267 IST [6492] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.003 s, total=0.022 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1EC37F8, redo lsn=0/1EC37A0
+2025-01-31 17:24:08.338 IST [5240] ERROR:  relation "chai_store" already exists
+2025-01-31 17:24:08.338 IST [5240] STATEMENT:  CREATE TABLE chai_store(                 
+	id 			SERIAL PRIMARY KEY,
+	chai_name 	VARCHAR(50),
+	price 		DECIMAL(5, 2),
+	chai_type 	VARCHAR(50),
+	available 	BOOLEAN
+	);
+2025-01-31 17:27:00.421 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 17:27:02.877 IST [6492] LOG:  checkpoint complete: wrote 24 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.418 s, sync=0.019 s, total=2.456 s; sync files=23, longest=0.002 s, average=0.001 s; distance=59 kB, estimate=59 kB; lsn=0/1ED33A0, redo lsn=0/1ED2580
+2025-01-31 17:27:49.723 IST [5240] ERROR:  relation "products" does not exist
+2025-01-31 17:27:49.723 IST [5240] STATEMENT:  ALTER TABLE products ADD stock INT DEFAULT 0;
+2025-01-31 17:29:58.579 IST [5240] ERROR:  syntax error at end of input at character 21
+2025-01-31 17:29:58.579 IST [5240] STATEMENT:  ALTER TABLE products
+2025-01-31 17:30:10.387 IST [5240] ERROR:  syntax error at or near ";" at character 21
+2025-01-31 17:30:10.387 IST [5240] STATEMENT:  ALTER TABLE products;
+2025-01-31 17:31:11.469 IST [5240] ERROR:  syntax error at or near "COLUMN" at character 6
+2025-01-31 17:31:11.469 IST [5240] STATEMENT:  DROP COLUMN category
+2025-01-31 17:31:29.109 IST [5240] ERROR:  syntax error at or near "COLUMN" at character 6
+2025-01-31 17:31:29.109 IST [5240] STATEMENT:  DROP COLUMN category;
+2025-01-31 17:32:38.490 IST [5240] ERROR:  relation "products" does not exist
+2025-01-31 17:32:38.490 IST [5240] STATEMENT:  TRUNCATE TABLE products;
+2025-01-31 17:35:47.994 IST [5240] ERROR:  syntax error at or near ";" at character 39
+2025-01-31 17:35:47.994 IST [5240] STATEMENT:  ALTER TABLE chai_store RENAME products;
+2025-01-31 17:35:53.369 IST [5240] ERROR:  syntax error at end of input at character 39
+2025-01-31 17:35:53.369 IST [5240] STATEMENT:  ALTER TABLE chai_store RENAME products
+2025-01-31 17:36:17.813 IST [5240] ERROR:  column "category" of relation "products" does not exist
+2025-01-31 17:36:17.813 IST [5240] STATEMENT:  ALTER TABLE products DROP COLUMN category;
+2025-01-31 17:36:34.122 IST [5240] ERROR:  relation "products" does not exist
+2025-01-31 17:36:34.122 IST [5240] STATEMENT:  TRUNCATE TABLE products;
+2025-01-31 17:36:49.332 IST [5240] ERROR:  relation "chai_store" does not exist
+2025-01-31 17:36:49.332 IST [5240] STATEMENT:  ALTER TABLE chai_store RENAME TO products
+2025-01-31 17:36:58.514 IST [5240] ERROR:  relation "products" does not exist
+2025-01-31 17:36:58.514 IST [5240] STATEMENT:  ALTER TABLE products ADD stock INT DEFAULT 0;
+2025-01-31 17:37:00.881 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 17:37:03.635 IST [6492] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.720 s, sync=0.019 s, total=2.755 s; sync files=22, longest=0.010 s, average=0.001 s; distance=113 kB, estimate=113 kB; lsn=0/1EEEDC0, redo lsn=0/1EEED68
+2025-01-31 17:38:44.785 IST [5240] ERROR:  relation "products" does not exist
+2025-01-31 17:38:44.785 IST [5240] STATEMENT:  ALTER TABLE products RENAME COLUMN name TO product_name
+2025-01-31 17:39:14.524 IST [5240] ERROR:  column "name" does not exist
+2025-01-31 17:39:14.524 IST [5240] STATEMENT:  ALTER TABLE inventory RENAME COLUMN name TO product_name
+2025-01-31 17:39:32.068 IST [5240] ERROR:  relation "products" does not exist
+2025-01-31 17:39:32.068 IST [5240] STATEMENT:  ALTER TABLE products ALTER COLUMN price TYPE DECIMAL(12, 2)
+2025-01-31 17:42:00.640 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 17:42:04.981 IST [6492] LOG:  checkpoint complete: wrote 42 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.299 s, sync=0.025 s, total=4.341 s; sync files=35, longest=0.010 s, average=0.001 s; distance=162 kB, estimate=162 kB; lsn=0/1F17840, redo lsn=0/1F177B0
+2025-01-31 17:47:27.442 IST [18120] ERROR:  relation "chai_store" does not exist
+2025-01-31 17:47:27.442 IST [18120] STATEMENT:  ALTER TABLE chai_store RENAME TO products;
+2025-01-31 17:48:52.258 IST [18120] ERROR:  column "name" of relation "products" does not exist at character 22
+2025-01-31 17:48:52.258 IST [18120] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('T-shirt', 900.00, 10)
+2025-01-31 17:51:00.227 IST [18120] ERROR:  column "name" of relation "products" does not exist at character 22
+2025-01-31 17:51:00.227 IST [18120] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('T-shirt', 900.00, 10)
+2025-01-31 17:51:42.817 IST [18120] ERROR:  syntax error at or near ";" at character 37
+2025-01-31 17:51:42.817 IST [18120] STATEMENT:  ALTER TABLE products ADD COLUMN name;
+2025-01-31 17:51:47.858 IST [18120] ERROR:  syntax error at end of input at character 37
+2025-01-31 17:51:47.858 IST [18120] STATEMENT:  ALTER TABLE products ADD COLUMN name
+2025-01-31 17:52:00.990 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 17:52:05.122 IST [6492] LOG:  checkpoint complete: wrote 40 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.094 s, sync=0.024 s, total=4.133 s; sync files=33, longest=0.010 s, average=0.001 s; distance=155 kB, estimate=161 kB; lsn=0/1F3E6F8, redo lsn=0/1F3E6A0
+2025-01-31 17:52:23.098 IST [18120] ERROR:  column "stock" of relation "products" does not exist at character 35
+2025-01-31 17:52:23.098 IST [18120] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('T-shirt', 900.00, 10)
+2025-01-31 17:52:53.498 IST [18120] ERROR:  syntax error at end of input at character 31
+2025-01-31 17:52:53.498 IST [18120] STATEMENT:  ALTER TABLE products ADD stock
+2025-01-31 17:53:13.841 IST [18120] ERROR:  syntax error at or near "INTO" at character 32
+2025-01-31 17:53:13.841 IST [18120] STATEMENT:  ALTER TABLE products ADD stock INTO products
+	
+2025-01-31 17:53:27.731 IST [18120] ERROR:  syntax error at or near "TO" at character 32
+2025-01-31 17:53:27.731 IST [18120] STATEMENT:  ALTER TABLE products ADD stock TO products
+2025-01-31 17:53:40.611 IST [18120] ERROR:  syntax error at end of input at character 38
+2025-01-31 17:53:40.611 IST [18120] STATEMENT:  ALTER TABLE products ADD COLUMN stock
+2025-01-31 17:53:49.363 IST [18120] ERROR:  syntax error at or near ";" at character 38
+2025-01-31 17:53:49.363 IST [18120] STATEMENT:  ALTER TABLE products ADD COLUMN stock;
+	
+2025-01-31 17:55:52.891 IST [18120] ERROR:  syntax error at or near "DELETE" at character 22
+2025-01-31 17:55:52.891 IST [18120] STATEMENT:  ALTER TABLE products DELETE COLUMN chai_type, available
+2025-01-31 17:56:12.601 IST [18120] ERROR:  syntax error at or near "DELETE" at character 22
+2025-01-31 17:56:12.601 IST [18120] STATEMENT:  ALTER TABLE products DELETE  chai_type, available
+2025-01-31 17:56:20.867 IST [18120] ERROR:  syntax error at or near "DELETE" at character 22
+2025-01-31 17:56:20.867 IST [18120] STATEMENT:  ALTER TABLE products DELETE chai_type, available
+2025-01-31 17:56:32.724 IST [18120] ERROR:  syntax error at or near "available" at character 38
+2025-01-31 17:56:32.724 IST [18120] STATEMENT:  ALTER TABLE products DROP chai_type, available
+2025-01-31 17:56:43.643 IST [18120] ERROR:  syntax error at or near "available" at character 38
+2025-01-31 17:56:43.643 IST [18120] STATEMENT:  ALTER TABLE products DROP chai_type, available;
+2025-01-31 17:56:50.474 IST [18120] ERROR:  syntax error at or near "available" at character 37
+2025-01-31 17:56:50.474 IST [18120] STATEMENT:  ALTER TABLE products DROP chai_type,available
+2025-01-31 17:57:00.118 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 17:57:01.213 IST [6492] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.051 s, sync=0.018 s, total=1.096 s; sync files=11, longest=0.011 s, average=0.002 s; distance=24 kB, estimate=148 kB; lsn=0/1F44910, redo lsn=0/1F448B8
+2025-01-31 17:58:34.353 IST [18120] ERROR:  numeric field overflow
+2025-01-31 17:58:34.353 IST [18120] DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+2025-01-31 17:58:34.353 IST [18120] STATEMENT:  UPDATE products SET price = 1300.00 WHERE name = 'T-shirt'
+2025-01-31 18:02:00.211 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 18:02:00.655 IST [6492] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.414 s, sync=0.014 s, total=0.445 s; sync files=5, longest=0.010 s, average=0.003 s; distance=16 kB, estimate=134 kB; lsn=0/1F48A58, redo lsn=0/1F48A00
+2025-01-31 18:07:00.661 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 18:07:01.000 IST [6492] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.313 s, sync=0.012 s, total=0.339 s; sync files=4, longest=0.010 s, average=0.003 s; distance=1 kB, estimate=121 kB; lsn=0/1F48FA0, redo lsn=0/1F48F48
+2025-01-31 18:43:19.454 IST [17008] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 18:43:19.455 IST [19380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 18:43:19.455 IST [14664] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 18:43:19.455 IST [18120] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 21:22:29.138 IST [9304] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 21:22:29.138 IST [16604] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 21:22:29.139 IST [18376] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-01-31 21:26:10.941 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 21:26:11.412 IST [6492] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.430 s, sync=0.013 s, total=0.471 s; sync files=2, longest=0.012 s, average=0.007 s; distance=8 kB, estimate=110 kB; lsn=0/1F4B0D0, redo lsn=0/1F4B078
+2025-01-31 23:20:11.747 IST [13816] ERROR:  type "string" does not exist at character 29
+2025-01-31 23:20:11.747 IST [13816] STATEMENT:  CREATE TABLE products(
+	name string,
+	price Decimal (5,2),
+	stock int
+	);
+2025-01-31 23:20:17.613 IST [13816] ERROR:  type "string" does not exist at character 29
+2025-01-31 23:20:17.613 IST [13816] STATEMENT:  CREATE TABLE products(
+	name String,
+	price Decimal (5,2),
+	stock int
+	);
+2025-01-31 23:20:28.566 IST [13816] ERROR:  syntax error at or near "price" at character 36
+2025-01-31 23:20:28.566 IST [13816] STATEMENT:  CREATE TABLE products(
+	name string
+	price Decimal (5,2)
+	stock int
+	);
+2025-01-31 23:20:42.710 IST [13816] ERROR:  syntax error at or near "price" at character 36
+2025-01-31 23:20:42.710 IST [13816] STATEMENT:  CREATE TABLE products(
+	name string
+	price decimal (5,2)
+	stock int
+	);
+2025-01-31 23:21:01.197 IST [13816] ERROR:  syntax error at or near ")" at character 71
+2025-01-31 23:21:01.197 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	string,
+	price 	decimal(5,2),
+	stock 	int,
+	);
+2025-01-31 23:21:08.868 IST [13816] ERROR:  syntax error at or near ")" at character 71
+2025-01-31 23:21:08.868 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	string,
+	price 	decimal(5,2),
+	stock 	int,
+	)
+2025-01-31 23:21:17.917 IST [13816] ERROR:  type "string" does not exist at character 30
+2025-01-31 23:21:17.917 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	string,
+	price 	decimal(5,2),
+	stock 	int
+	);
+2025-01-31 23:22:49.923 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 23:23:53.575 IST [13816] ERROR:  relation "inventory" does not exist at character 8
+2025-01-31 23:23:53.575 IST [13816] STATEMENT:  UPDATE inventory SET stock = stock - 5
+2025-01-31 23:23:58.998 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:23:58.998 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket, 3000.00, 5');
+2025-01-31 23:24:11.023 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:24:11.023 IST [13816] STATEMENT:  BEGIN;
+2025-01-31 23:24:18.238 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:24:18.238 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	decimal(5,2),
+	stock 	int
+	);
+2025-01-31 23:24:32.504 IST [6492] LOG:  checkpoint complete: wrote 974 buffers (5.9%); 0 WAL file(s) added, 0 removed, 1 recycled; write=102.468 s, sync=0.103 s, total=102.582 s; sync files=301, longest=0.010 s, average=0.001 s; distance=4557 kB, estimate=4557 kB; lsn=0/23BE8A8, redo lsn=0/23BE818
+2025-01-31 23:25:55.297 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:25:55.297 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	decimal(5,2),
+	stock 	int
+	);
+2025-01-31 23:25:57.272 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:25:57.272 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	decimal(5,2),
+	stock 	int
+	);
+2025-01-31 23:26:41.959 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:26:41.959 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	decimal(5,2),
+	stock 	int
+	);
+2025-01-31 23:26:49.767 IST [13816] ERROR:  INSERT has more target columns than expressions at character 28
+2025-01-31 23:26:49.767 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket, 3000.00, 5');
+2025-01-31 23:27:14.071 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:27:14.071 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	decimal(12,2),
+	stock 	int
+	);
+2025-01-31 23:27:19.591 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:27:19.591 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	decimal(12,2),
+	stock 	int
+	);
+2025-01-31 23:27:25.773 IST [13816] ERROR:  INSERT has more target columns than expressions at character 28
+2025-01-31 23:27:25.773 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket, 3000.00, 5');
+	
+2025-01-31 23:28:08.061 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:28:08.061 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(12,2),
+	stock 	INT
+	);
+2025-01-31 23:28:12.773 IST [13816] ERROR:  INSERT has more target columns than expressions at character 28
+2025-01-31 23:28:12.773 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket, 3000.00, 5');
+	
+2025-01-31 23:28:42.189 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:28:42.189 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+2025-01-31 23:28:59.553 IST [13816] ERROR:  numeric field overflow
+2025-01-31 23:28:59.553 IST [13816] DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+2025-01-31 23:28:59.553 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+2025-01-31 23:29:20.973 IST [13816] ERROR:  numeric field overflow
+2025-01-31 23:29:20.973 IST [13816] DETAIL:  A field with precision 5, scale 2 must round to an absolute value less than 10^3.
+2025-01-31 23:29:20.973 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+2025-01-31 23:29:39.902 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:29:39.902 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(5,2),
+	stock 	INT
+	);
+2025-01-31 23:30:11.150 IST [13816] ERROR:  relation "products" does not exist at character 15
+2025-01-31 23:30:11.150 IST [13816] STATEMENT:  SELECT * FROM products
+2025-01-31 23:30:22.436 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:30:22.436 IST [13816] STATEMENT:  SELECT * FROM inventory
+2025-01-31 23:31:39.966 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:31:39.966 IST [13816] STATEMENT:  SELECT * FROM inventory
+2025-01-31 23:32:00.230 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:32:00.230 IST [13816] STATEMENT:  SELECT * FROM inventory
+2025-01-31 23:32:06.150 IST [13816] ERROR:  relation "inventory" does not exist at character 15
+2025-01-31 23:32:06.150 IST [13816] STATEMENT:  SELECT * FROM inventory
+2025-01-31 23:32:23.381 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:32:23.381 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(5,2),
+	stock 	INT
+	);
+2025-01-31 23:32:49.510 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 23:32:51.058 IST [6492] LOG:  checkpoint complete: wrote 15 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.534 s, sync=0.009 s, total=1.549 s; sync files=11, longest=0.003 s, average=0.001 s; distance=51 kB, estimate=4107 kB; lsn=0/23CB4E0, redo lsn=0/23CB488
+2025-01-31 23:35:54.752 IST [13816] ERROR:  relation "products" does not exist at character 13
+2025-01-31 23:35:54.752 IST [13816] STATEMENT:  INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+2025-01-31 23:36:11.143 IST [13816] ERROR:  relation "inventory" already exists
+2025-01-31 23:36:11.143 IST [13816] STATEMENT:  ALTER TABLE products RENAME TO inventory
+2025-01-31 23:36:14.943 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:36:14.943 IST [13816] STATEMENT:  UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+2025-01-31 23:36:39.311 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:36:39.311 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+2025-01-31 23:36:51.000 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:36:51.000 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+2025-01-31 23:37:13.843 IST [13816] ERROR:  syntax error at or near "TABLE" at character 8
+2025-01-31 23:37:13.843 IST [13816] STATEMENT:  DELETE TABLE products
+	
+2025-01-31 23:37:30.119 IST [13816] ERROR:  relation "products" already exists
+2025-01-31 23:37:30.119 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+2025-01-31 23:37:38.958 IST [13816] ERROR:  relation "inventory" already exists
+2025-01-31 23:37:38.958 IST [13816] STATEMENT:  ALTER TABLE products RENAME TO inventory
+2025-01-31 23:37:41.714 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:37:41.714 IST [13816] STATEMENT:  UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+2025-01-31 23:37:49.061 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 23:37:51.428 IST [6492] LOG:  checkpoint complete: wrote 23 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.339 s, sync=0.013 s, total=2.368 s; sync files=17, longest=0.005 s, average=0.001 s; distance=93 kB, estimate=3705 kB; lsn=0/23E2990, redo lsn=0/23E2938
+2025-01-31 23:40:16.855 IST [13816] ERROR:  relation "savepoint1" does not exist at character 15
+2025-01-31 23:40:16.855 IST [13816] STATEMENT:  SELECT * FROM savepoint1
+2025-01-31 23:40:28.526 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:40:28.526 IST [13816] STATEMENT:  SELECT savepoint1
+2025-01-31 23:40:47.133 IST [13816] ERROR:  column "savepoint1" does not exist at character 8
+2025-01-31 23:40:47.133 IST [13816] STATEMENT:  SELECT savepoint1
+2025-01-31 23:40:55.862 IST [13816] ERROR:  syntax error at or near "ROLLBACK" at character 101
+2025-01-31 23:40:55.862 IST [13816] STATEMENT:  BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT savepoint1
+2025-01-31 23:41:04.485 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-01-31 23:41:04.485 IST [13816] STATEMENT:  BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+2025-01-31 23:41:11.375 IST [13816] ERROR:  savepoint "savepoint1" does not exist
+2025-01-31 23:41:11.375 IST [13816] STATEMENT:  ROLLBACK TO savepoint1
+2025-01-31 23:41:21.317 IST [13816] ERROR:  column "savepoint1" does not exist at character 8
+2025-01-31 23:41:21.317 IST [13816] STATEMENT:  SELECT savepoint1
+2025-01-31 23:41:44.821 IST [13816] ERROR:  column "savepoint1" does not exist at character 8
+2025-01-31 23:41:44.821 IST [13816] STATEMENT:  SELECT savepoint1
+2025-01-31 23:42:49.440 IST [6492] LOG:  checkpoint starting: time
+2025-01-31 23:42:49.561 IST [6492] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.110 s, sync=0.003 s, total=0.122 s; sync files=2, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=3335 kB; lsn=0/23E2D80, redo lsn=0/23E2D28
+2025-02-01 00:10:10.766 IST [13816] ERROR:  relation "products" already exists
+2025-02-01 00:10:10.766 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+2025-02-01 00:10:29.394 IST [13816] ERROR:  syntax error at or near "VARCHAR" at character 165
+2025-02-01 00:10:29.394 IST [13816] STATEMENT:  EXPLAIN (FORMAT JSON, ANALYZE true, VERBOSE false, COSTS false, TIMING false, BUFFERS false, SUMMARY false, SETTINGS false, WAL false) CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+	
+	-- DELETE FROM products
+	
+	BEGIN;
+	
+	INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+	ALTER TABLE products RENAME TO inventory
+	
+	UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+	
+	COMMIT
+	
+	BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT * FROM inventory
+	
+	
+	
+	
+2025-02-01 00:10:31.490 IST [13816] ERROR:  syntax error at or near "VARCHAR" at character 165
+2025-02-01 00:10:31.490 IST [13816] STATEMENT:  EXPLAIN (FORMAT JSON, ANALYZE true, VERBOSE false, COSTS false, TIMING false, BUFFERS false, SUMMARY false, SETTINGS false, WAL false) CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+	
+	-- DELETE FROM products
+	
+	BEGIN;
+	
+	INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+	ALTER TABLE products RENAME TO inventory
+	
+	UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+	
+	COMMIT
+	
+	BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT * FROM inventory
+	
+	
+	
+	
+2025-02-01 00:10:32.174 IST [13816] ERROR:  syntax error at or near "VARCHAR" at character 165
+2025-02-01 00:10:32.174 IST [13816] STATEMENT:  EXPLAIN (FORMAT JSON, ANALYZE true, VERBOSE false, COSTS false, TIMING false, BUFFERS false, SUMMARY false, SETTINGS false, WAL false) CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+	
+	-- DELETE FROM products
+	
+	BEGIN;
+	
+	INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+	ALTER TABLE products RENAME TO inventory
+	
+	UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+	
+	COMMIT
+	
+	BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT * FROM inventory
+	
+	
+	
+	
+2025-02-01 00:10:32.710 IST [13816] ERROR:  syntax error at or near "VARCHAR" at character 165
+2025-02-01 00:10:32.710 IST [13816] STATEMENT:  EXPLAIN (FORMAT JSON, ANALYZE true, VERBOSE false, COSTS false, TIMING false, BUFFERS false, SUMMARY false, SETTINGS false, WAL false) CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+	
+	-- DELETE FROM products
+	
+	BEGIN;
+	
+	INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+	ALTER TABLE products RENAME TO inventory
+	
+	UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+	
+	COMMIT
+	
+	BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT * FROM inventory
+	
+	
+	
+	
+2025-02-01 00:10:37.470 IST [13816] ERROR:  syntax error at or near "VARCHAR" at character 165
+2025-02-01 00:10:37.470 IST [13816] STATEMENT:  EXPLAIN (FORMAT JSON, ANALYZE true, VERBOSE false, COSTS false, TIMING false, BUFFERS false, SUMMARY false, SETTINGS false, WAL false) CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+	
+	-- DELETE FROM products
+	
+	BEGIN;
+	
+	INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+	ALTER TABLE products RENAME TO inventory
+	
+	UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+	
+	COMMIT
+	
+	BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT * FROM inventory
+	
+	
+	
+	
+2025-02-01 00:10:38.333 IST [13816] ERROR:  syntax error at or near "VARCHAR" at character 165
+2025-02-01 00:10:38.333 IST [13816] STATEMENT:  EXPLAIN (FORMAT JSON, ANALYZE true, VERBOSE false, COSTS false, TIMING false, BUFFERS false, SUMMARY false, SETTINGS false, WAL false) CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+	
+	-- DELETE FROM products
+	
+	BEGIN;
+	
+	INSERT INTO products(name, price, stock)
+	VALUES('Jacket', 3000.00, 5);
+	
+	ALTER TABLE products RENAME TO inventory
+	
+	UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+	
+	COMMIT
+	
+	BEGIN;
+	SAVEPOINT savepoint1;
+	INSERT INTO products (name, price, stock)
+	VALUES('Jeans', 3000.00, 6)
+	
+	ROLLBACK TO savepoint1 -- rollback to savepoint1 if needed
+	
+	COMMIT
+	
+	SELECT * FROM inventory
+	
+	
+	
+	
+2025-02-01 00:10:40.638 IST [13816] ERROR:  relation "products" already exists
+2025-02-01 00:10:40.638 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+2025-02-01 00:11:19.095 IST [13816] ERROR:  relation "inventory" already exists
+2025-02-01 00:11:19.095 IST [13816] STATEMENT:  ALTER TABLE products RENAME TO inventory
+2025-02-01 00:11:40.493 IST [13816] WARNING:  there is no transaction in progress
+2025-02-01 00:11:49.303 IST [13816] ERROR:  relation "products" already exists
+2025-02-01 00:11:49.303 IST [13816] STATEMENT:  CREATE TABLE products(
+	name 	VARCHAR(50),
+	price 	DECIMAL(6,2),
+	stock 	INT
+	);
+2025-02-01 00:11:57.349 IST [13816] ERROR:  relation "inventory" already exists
+2025-02-01 00:11:57.349 IST [13816] STATEMENT:  ALTER TABLE products RENAME TO inventory
+2025-02-01 00:12:00.656 IST [13816] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2025-02-01 00:12:00.656 IST [13816] STATEMENT:  UPDATE inventory SET stock = stock - 5 WHERE name = 'Jacket'
+2025-02-01 00:12:49.598 IST [6492] LOG:  checkpoint starting: time
+2025-02-01 00:12:50.042 IST [6492] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.433 s, sync=0.004 s, total=0.445 s; sync files=4, longest=0.003 s, average=0.001 s; distance=1 kB, estimate=3001 kB; lsn=0/23E3318, redo lsn=0/23E32C0
+2025-02-01 00:17:49.043 IST [6492] LOG:  checkpoint starting: time
+2025-02-01 00:19:33.295 IST [6492] LOG:  checkpoint complete: wrote 974 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=104.132 s, sync=0.104 s, total=104.253 s; sync files=303, longest=0.010 s, average=0.001 s; distance=4553 kB, estimate=4553 kB; lsn=0/287BFB8, redo lsn=0/2855838
+2025-02-01 00:32:49.313 IST [6492] LOG:  checkpoint starting: time
+2025-02-01 00:32:51.254 IST [6492] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.913 s, sync=0.012 s, total=1.941 s; sync files=16, longest=0.003 s, average=0.001 s; distance=166 kB, estimate=4114 kB; lsn=0/287F1E8, redo lsn=0/287F190
+2025-02-01 01:02:49.275 IST [6492] LOG:  checkpoint starting: time
+2025-02-01 01:04:33.869 IST [6492] LOG:  checkpoint complete: wrote 974 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=104.473 s, sync=0.105 s, total=104.595 s; sync files=300, longest=0.011 s, average=0.001 s; distance=4553 kB, estimate=4553 kB; lsn=0/2CF1930, redo lsn=0/2CF18A0
+2025-02-01 01:06:14.798 IST [15164] ERROR:  relation "customers" does not exist at character 13
+2025-02-01 01:06:14.798 IST [15164] STATEMENT:  INSERT INTO customers(customer_id, customer_name) 
+	VALUES
+	(1, 'Alice'),
+	(2, 'Bob'),
+	(3, 'Charlie'),
+	(4, 'David'), -- David hasn't placed any orders
+	(5, 'Eve');
+2025-02-01 01:07:49.881 IST [6492] LOG:  checkpoint starting: time
+2025-02-01 01:07:55.208 IST [6492] LOG:  checkpoint complete: wrote 51 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.282 s, sync=0.027 s, total=5.328 s; sync files=39, longest=0.011 s, average=0.001 s; distance=157 kB, estimate=4114 kB; lsn=0/2D18E68, redo lsn=0/2D18E10
+2025-02-01 01:14:51.641 IST [15164] ERROR:  insert or update on table "orders" violates foreign key constraint "orders_customer_id_fkey"
+2025-02-01 01:14:51.641 IST [15164] DETAIL:  Key (customer_id)=(6) is not present in table "customers".
+2025-02-01 01:14:51.641 IST [15164] STATEMENT:  INSERT INTO orders(order_id, customer_id, product_name, quantity)
+	VALUES
+	(101, 1, 'T-shirt', 2), 	-- Alice's order
+	(102, 1, 'Jeans', 1), 		-- Alice's order  
+	(103, 2, 'Jeans', 1),		-- Bob's order
+	(104, NULL, 'Sneakers', 2), -- Order with no customer_id
+	(105, 6, 'Hat', 1); 		-- Order with invalid customer_id
+	
+2025-02-01 01:15:10.781 IST [15164] ERROR:  syntax error at end of input at character 224
+2025-02-01 01:15:10.781 IST [15164] STATEMENT:  INSERT INTO orders(order_id, customer_id, product_name, quantity)
+	VALUES
+	(101, 1, 'T-shirt', 2), 	-- Alice's order
+	(102, 1, 'Jeans', 1), 		-- Alice's order  
+	(103, 2, 'Jeans', 1),		-- Bob's order
+	(104, NULL, 'Sneakers', 2),
+2025-02-01 01:17:49.224 IST [6492] LOG:  checkpoint starting: time
+2025-02-01 01:17:49.778 IST [6492] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.532 s, sync=0.015 s, total=0.555 s; sync files=5, longest=0.011 s, average=0.003 s; distance=2 kB, estimate=3702 kB; lsn=0/2D19760, redo lsn=0/2D19708
+2025-02-01 01:18:00.814 IST [15164] ERROR:  syntax error at or near "SELECT" at character 25
+2025-02-01 01:18:00.814 IST [15164] STATEMENT:  SELECT * FROM customers
+	SELECT * FROM orders
+2025-02-01 01:22:52.126 IST [15164] ERROR:  syntax error at end of input at character 78
+2025-02-01 01:22:52.126 IST [15164] STATEMENT:  SELECT customer_name, product_name, quantity FROM customers INNER JOIN orders
+2025-02-01 01:35:34.324 IST [15164] ERROR:  syntax error at or near "OUTER" at character 70
+2025-02-01 01:35:34.324 IST [15164] STATEMENT:  SELECT c.customer_name, o.product_name, o.quantity 
+	FROM customers c
+	OUTER JOIN orders o ON c.customer_id = o.customer_id
+2025-02-01 01:37:55.406 IST [15164] ERROR:  syntax error at or near "ON" at character 90
+2025-02-01 01:37:55.406 IST [15164] STATEMENT:  SELECT c.customer_name, o.product_name, o.quantity 
+	FROM customers c
+	CROSS JOIN orders o ON c.customer_id = o.customer_id
+2025-02-01 02:15:57.654 IST [18508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.655 IST [18952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.655 IST [13092] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.656 IST [13684] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.656 IST [15164] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.656 IST [18272] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.656 IST [17204] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2025-02-01 02:15:57.657 IST [10220] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
