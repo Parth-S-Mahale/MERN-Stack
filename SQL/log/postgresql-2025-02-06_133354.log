@@ -1,3 +1,0 @@
-2025-02-06 13:33:54.133 IST [7596] LOG:  database system was shut down at 2025-02-06 13:33:26 IST
-2025-02-06 13:38:54.134 IST [7580] LOG:  checkpoint starting: time
-2025-02-06 13:38:54.153 IST [7580] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.003 s, total=0.020 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/15BB378, redo lsn=0/15BB320
