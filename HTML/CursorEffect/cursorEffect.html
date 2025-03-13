@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Effect</title>
+    <style>
+      
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .typewriter{
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        border-right: 2px solid black;
+      }
+
+      .h1-text {
+        font-size: 2em;
+        animation: typing 4s steps(10000, end) 3s forwards, blink 0.7s infinite;
+      }
+
+      .p-text {
+        font-size: 1.2em;
+        animation: typing 4s steps(10000, end) forwards 3s, blink 0.7s infinite 3s;
+      }
+
+      @keyframes typing {
+        from{
+          width: 0%;
+        }
+        to{
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50%{
+          border-color: transparent;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="typewriter h1-text">Welcome to Gateopedia</h1>
+    <p class="typewriter p-text">Your study abroad guide.</p>
+  
+  </body>
+</html>

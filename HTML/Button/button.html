@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: sans-serif;
+    }
+
+    .container{
+        display: grid;
+        place-items: center; /* Centers both horizontally & vertically */
+        height: 100vh;
+        background-color: #007a72;
+    }
+    
+    .btn{
+        width: 400px;
+        height: 400px;
+        background-color: rgb(0, 3, 24);
+        border-radius: 10px;
+        text-align: center;
+        line-height: 400px;
+    }
+
+    .btn button{
+        width: 100px;
+        height: 40px;
+        background-color: black;
+        color: #fff;
+        border: 5px solid #fff;
+        border-radius: 10px;
+        transition: border-color 0.3s ease-in-out, transform 0.3s ease;
+    }
+
+    .btn button:hover{
+        cursor: pointer;
+        border-color: rgb(5, 184, 220);
+        transform: scale(1.1);
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="btn">
+            <button>Click Me!</button>
+        </div>
+    </div>
+</body>
+
+</html>

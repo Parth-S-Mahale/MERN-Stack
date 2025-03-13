@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1a1a1a;
+        border-radius: 30px;
+        margin: 5px;
+        padding: 15px 20px;
+    }
+
+    .navbar .logo {
+        color: aliceblue;
+        font-size: 20px ;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li{
+        margin: 0 15px;
+    }
+
+     /* When to Use inline-block?
+✔️ When working with inline elements (<a>, <span>) that need transform effects.
+✔️ When ensuring elements maintain their width and height while transforming.
+✔️ When creating hover effects on links in a navbar. */
+
+    .nav-links a {
+        position: relative;
+        padding: 10px;
+        text-decoration: none;
+        color: burlywood;
+        font-size: 16px;
+        display: inline-block; /* Allows transformation */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links a::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: #f4a261;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover{
+      transform: scale(1.1);
+      color: #ffffff;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    @media (max-width:600px){
+        .nav-links{
+            flex-direction: column;
+            display: none;
+        }
+
+        .nav-links.show{
+            display: flex;
+        }
+    }
+
+  </style>
+
+  <body>
+    <nav class="navbar">
+      <a href="" class="logo">Gateopedia</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+  
+</html>
